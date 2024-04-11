@@ -65,3 +65,33 @@ app.get("/eliminar", (req, res) => {
 //     ? res.send(`El archivo ${archivo} fue creado con éxito`)
 //     : res.status(500).send("Algo salio mal")
 // })
+
+// app.get("/leer", async (req, res) => {
+//     const { archivo } = req.query
+//     try {
+//         const data = await fs. readFile(`${archivo}`, `utf-8`)
+//         res.send(data)
+//     }catch (error){
+//         res.status(500).send(error)
+//     }
+// });
+
+// app.get("/renombrar", async(req,res) => {
+//     const { nombre, nuevoNombre } = req.query
+//     try{
+//         await fs.rename(nombre, nuevoNombre)
+//         res.send(`El arvhivo ${nombre} fue renombrado a ${nuevoNombre} exitosamente`)
+//     }catch{
+//         res.status(500).send("El Archivo consultado no existe")
+//     }
+// });
+
+// app.get("/eliminar", async(req, res) => {
+//     const { archivo } = req.query
+//     try{
+//         await fs.unlink(archivo)
+//         res.send(`El archivo ${archivo} ha sido eliminado exitosamente.`)
+//     }catch{
+//         res.status(500).send("El Archivo consultado no existe")
+//     }
+// });
